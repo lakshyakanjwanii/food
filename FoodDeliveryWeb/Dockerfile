@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN javac FoodDeliveryServer.java
+RUN javac -cp .:mysql-connector.jar FoodDeliveryServer.java
 
-CMD ["java", "FoodDeliveryServer"]
+CMD ["java", "-cp", ".:mysql-connector.jar", "FoodDeliveryServer"]
