@@ -10,7 +10,7 @@ public class FoodDeliveryServer {
     static final String DB_URL  = "jdbc:mysql://localhost:3306/food_delivery";
     static final String DB_USER = System.getenv().getOrDefault("DB_USER", "root");
     static final String DB_PASS = System.getenv().getOrDefault("DB_PASS", "Devka@123");
-    static final int    PORT    = 8080;
+    static final int PORT = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
 
     // ─── DB ───────────────────────────────────────────────────────────────────
     static Connection getConn() throws Exception {
