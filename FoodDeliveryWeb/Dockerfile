@@ -6,4 +6,4 @@ COPY . .
 
 RUN javac -cp .:mysql-connector.jar FoodDeliveryServer.java
 
-CMD ["java", "-cp", ".:mysql-connector.jar", "FoodDeliveryServer"]
+CMD ["sh", "run.sh"]
